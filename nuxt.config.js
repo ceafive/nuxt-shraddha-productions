@@ -16,16 +16,8 @@ export default {
     ],
 
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-      // { rel: 'stylesheet', href: 'https://unpkg.com/aos@next/dist/aos.css' }
-    ],
-    script: [
-      {
-        // src: 'https://unpkg.com/aos@next/dist/aos.js'
-      }
-      // {
-      //   AOS.init()
-      // }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://unpkg.com/aos@next/dist/aos.css' }
     ]
   },
   /*

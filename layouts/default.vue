@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import AOS from 'aos';
+
 import LoadingScreen from '@/components/LoadingScreen';
 import Navbar from '@/components/Navbar';
 import MobileMenu from '@/components/MobileMenu';
@@ -40,6 +42,10 @@ export default {
     }
   },
   mounted() {
+    // LOGIC FOR INITILIAZING ANIMATE ON SCROLL
+    AOS.init();
+
+    // LOGIC FOR LOADING SCREEN
     setTimeout(() => {
       this.isLoadingValue = true;
     }, 6000);

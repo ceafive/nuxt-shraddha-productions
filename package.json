@@ -13,6 +13,7 @@
     "lint:fix": "eslint --fix  --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "nuxt": "^2.0.0",
     "uuid": "^8.0.0"
   },
