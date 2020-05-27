@@ -1,0 +1,34 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'FoundersGrotesk';
+  font-display: swap;
+  src: url('../fonts/FoundersGrotesk-TextRegular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Antiga';
+  font-display: swap;
+  src: url('../fonts/Antiga.woff') format('woff');
+}
+@font-face {
+  font-family: 'Adieu';
+  font-display: swap;
+  src: url('../fonts/Adieu-Regular.woff') format('woff');
+}
+
+body {
+  -ms-overflow-style: none;
+  overflow-x: hidden;
+  position: relative;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  --overlay-bg: #191919 !important;
+  --transition-duration: 0.5s !important;
+}

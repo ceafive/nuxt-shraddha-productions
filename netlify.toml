@@ -1,0 +1,48 @@
+
+[[redirects]]
+  from = "/about"
+  to = "/"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+  [[redirects]]
+  from = "/contact"
+  to = "/"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+  [[redirects]]
+  from = "/galleries"
+  to = "/"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+  [[redirects]]
+  from = "/galleries/*"
+  to = "/"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+  [[redirects]]
+  from = "/collections"
+  to = "/"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+  [[redirects]]
+  from = "/collections/*"
+  to = "/"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+  [[redirects]]
+  from = "/campaign"
+  to = "/"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+    [[redirects]]
+  from = "/press-media"
+  to = "/"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
