@@ -1,14 +1,12 @@
 <template>
-  <div class="app">
-    <transition name="fade" mode="out-in">
-      <LoadingScreen v-if="isLoading" key="1" :is-loading="isLoading" />
-      <div v-else key="2">
-        <MobileMenu />
-        <Navbar />
-        <nuxt />
-      </div>
-    </transition>
-  </div>
+  <transition name="fade">
+    <LoadingScreen v-if="isLoading" key="1" :is-loading="isLoading" />
+    <div v-else key="2" class="app">
+      <MobileMenu />
+      <Navbar />
+      <nuxt />
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -65,6 +63,5 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
-  transform: scale(0);
 }
 </style>

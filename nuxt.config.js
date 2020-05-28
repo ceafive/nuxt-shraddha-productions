@@ -112,7 +112,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/css/route-transition.css'],
+  css: ['assets/css/route-transition.css'],
   /*
    ** Plugins to load before mounting the App
    */
