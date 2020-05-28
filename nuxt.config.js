@@ -136,7 +136,7 @@ export default {
   /*
    ** Transition
    */
-  pageTransition: 'intro',
+  // pageTransition: 'intro',
   /*
    ** Build configuration
    */

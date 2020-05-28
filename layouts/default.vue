@@ -5,7 +5,9 @@
       <div v-else key="2">
         <MobileMenu />
         <Navbar />
-        <nuxt />
+        <transition name="intro">
+          <nuxt />
+        </transition>
       </div>
     </transition>
   </div>
@@ -19,7 +21,7 @@ import Navbar from '@/components/Navbar';
 import MobileMenu from '@/components/MobileMenu';
 
 export default {
-  transition: 'intro',
+  // transition: 'intro',
   components: {
     Navbar,
     MobileMenu,
