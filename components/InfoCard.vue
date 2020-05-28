@@ -4,6 +4,9 @@
     data-aos-duration="1000"
     data-aos-easing="ease-in-out-cubic"
     class="info-card"
+    :style="{
+      backgroundImage: `url('${image()}')`
+    }"
   >
     <div class="main">
       <div class="video-bg">
@@ -82,7 +85,7 @@ export default {
 }
 
 .info-card .main .video-bg {
-  @apply absolute top-0 left-0 h-full w-full z-10;
+  @apply absolute top-0 left-0 h-full w-full;
 }
 
 .info-card .main .video-bg video {
