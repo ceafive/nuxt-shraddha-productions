@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <transition name="fade">
+    <transition name="fade" mode="out-in">
       <LoadingScreen v-if="isLoading" key="1" :is-loading="isLoading" />
       <div v-else key="2">
         <MobileMenu />
@@ -19,7 +19,6 @@ import Navbar from '@/components/Navbar';
 import MobileMenu from '@/components/MobileMenu';
 
 export default {
-  // transition: 'intro',
   components: {
     Navbar,
     MobileMenu,
@@ -48,7 +47,7 @@ export default {
     // LOGIC FOR LOADING SCREEN
     setTimeout(() => {
       this.isLoadingValue = true;
-    }, 6000);
+    }, 5000);
   }
 };
 </script>
@@ -60,13 +59,12 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-  background: #000;
-  transition: all 1.1s ease-in-out;
+  transition: all ease-out;
 }
 
 .fade-enter,
 .fade-leave-to {
-  background: #000;
   opacity: 0;
+  transform: scale(0);
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ loader: isLoading, fadeout: !isLoading }">
+  <div :class="{ loader: isLoading }">
     <transition name="fade">
       <div v-if="!displaySecondDiv" key="1" class="page-1">
         <div class="slide-1">
@@ -136,20 +136,9 @@ export default {
   }
 }
 
-.fadeout {
-  animation: fadeout 0.5s forwards;
-}
-
-@keyframes fadeout {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease-in-out;
+  transition: all 0.5s ease-out;
 }
 
 .fade-enter,

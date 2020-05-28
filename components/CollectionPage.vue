@@ -40,15 +40,15 @@
         @page-change="handlePageChange"
       >
         <slide
-          v-for="(img, index) in numberOfImages[currentCollection]"
-          :key="currentCollection[index]"
+          v-for="number in numberOfImages[currentCollection]"
+          :key="`${currentCollection}-${number}`"
           class="slide"
         >
           <img
             v-if="currentCollection === 'diva'"
             class="mx-auto"
-            :src="require(`../assets/images/diva/diva-${index + 1}-fp.jpg`)"
-            alt=""
+            :src="require(`../assets/images/diva/diva-${number}-fp.jpg`)"
+            :alt="`${currentCollection}-${number}`"
           />
         </slide>
       </carousel>
@@ -83,7 +83,7 @@
           </p>
           <img
             class="image"
-            :src="require(`../assets/images/${collection.mainheader}.jpg`)"
+            :src="require(`@/assets/images/${collection.mainheader}.jpg`)"
             :alt="collection.mainheader"
           />
         </slide>
@@ -93,7 +93,7 @@
 </template>
 
 <script>
-import { collectioncards } from '../data/cardsdata';
+import { collectioncards } from '@/plugins/cardsdata';
 export default {
   props: {
     mainheader: {
@@ -146,7 +146,10 @@ export default {
     },
     handleSlideClick(dataset) {
       const paramName = dataset.name;
-      this.$router.push({ name: 'collection', params: { name: paramName } });
+      this.$router.push({
+        name: 'collections-name',
+        params: { name: paramName }
+      });
     }
   }
 };

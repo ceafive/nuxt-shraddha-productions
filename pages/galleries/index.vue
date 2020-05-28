@@ -74,14 +74,16 @@ export default {
   methods: {
     handleSlideClick(dataset) {
       const clicked = dataset.name;
-      this.$router.push({ name: 'gallery', params: { name: clicked } });
+      this.$router.push({ name: 'galleries-name', params: { name: clicked } });
+      // this.$nextTick(() => {
+      //   console.log(this.$route);
+      // });
     }
   },
   head() {
     return {
       title: 'Galleries',
       meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: 'description',
           name: 'description',

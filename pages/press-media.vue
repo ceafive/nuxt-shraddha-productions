@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { pressArticles } from '../../plugins/articles';
+import { pressArticles } from '../plugins/articles';
 export default {
   data() {
     return {

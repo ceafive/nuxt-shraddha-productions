@@ -12,11 +12,9 @@
       data-aos-duration="1000"
       class="mainheader"
     >
-      <p>
-        <nuxt-link :to="'/collections/' + mainheader">
-          {{ mainheader }}</nuxt-link
-        >
-      </p>
+      <nuxt-link :to="'/collections/' + mainheader">
+        {{ mainheader }}</nuxt-link
+      >
     </div>
   </div>
 </template>

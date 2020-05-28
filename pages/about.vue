@@ -107,7 +107,7 @@ export default {
   @apply text-center;
 }
 .section1 {
-  background-image: url('../../assets/images/about.jpg');
+  background-image: url('../assets/images/about.jpg');
   background-position: 57%;
   background-size: cover;
 }

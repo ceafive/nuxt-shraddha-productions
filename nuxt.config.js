@@ -116,10 +116,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '~/plugins/vue-fragment',
-    { src: '~/plugins/vue-carousel', ssr: false }
-  ],
+  plugins: [{ src: '~/plugins/vue-carousel', ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */
