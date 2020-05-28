@@ -28,8 +28,3 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-:root {
-  --transition-duration: 800ms !important;
-  --transition-delay: 300ms !important;
-  --background-color: #191919 !important;
-}

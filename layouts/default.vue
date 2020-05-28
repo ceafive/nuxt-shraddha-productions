@@ -72,7 +72,7 @@ export default {
 
 .intro-enter-active,
 .intro-leave-active {
-  transition-duration: calc(var(--transition-duration) * 2);
+  transition-duration: 1600ms;
 }
 .intro-enter-active::before,
 .intro-leave-active::before,
@@ -91,25 +91,23 @@ export default {
 }
 .intro-enter-active::before,
 .intro-leave-active::before {
-  background-color: var(--background-color);
+  background-color: #191919;
 }
 .intro-enter-active::after,
 .intro-leave-active::after {
   top: 50%;
-  background-color: var(--background-color);
+  background-color: #191919;
 }
 .intro-leave::before,
 .intro-leave::after {
   transform: scaleX(0);
 }
 .intro-leave-active::before {
-  transition-duration: var(--transition-duration);
+  transition-duration: 800ms;
 }
 .intro-leave-active::after {
-  transition-duration: calc(
-    var(--transition-duration) - var(--transition-delay)
-  );
-  transition-delay: var(--transition-delay);
+  transition-duration: 500ms;
+  transition-delay: 300ms;
 }
 .intro-leave-to::before,
 .intro-leave-to::after {
@@ -121,13 +119,11 @@ export default {
   transform: scaleX(1);
 }
 .intro-enter-active::before {
-  transition-duration: var(--transition-duration);
+  transition-duration: 800ms;
 }
 .intro-enter-active::after {
-  transition-duration: calc(
-    var(--transition-duration) - var(--transition-delay)
-  );
-  transition-delay: var(--transition-delay);
+  transition-duration: 500ms;
+  transition-delay: 300ms;
 }
 .intro-enter-to::before,
 .intro-enter-to::after {
