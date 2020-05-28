@@ -13,8 +13,8 @@
       class="mainheader"
     >
       <p>
-        <router-link :to="'/collections/' + mainheader">
-          {{ mainheader }}</router-link
+        <nuxt-link :to="'/collections/' + mainheader">
+          {{ mainheader }}</nuxt-link
         >
       </p>
     </div>

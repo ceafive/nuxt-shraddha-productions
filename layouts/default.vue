@@ -19,7 +19,7 @@ import Navbar from '@/components/Navbar';
 import MobileMenu from '@/components/MobileMenu';
 
 export default {
-  name: 'App',
+  transition: 'intro',
   components: {
     Navbar,
     MobileMenu,
@@ -33,7 +33,7 @@ export default {
   computed: {
     isLoading: {
       get() {
-        if (this.$route.name === 'home') return !this.isLoadingValue;
+        if (this.$route.fullPath === '/') return !this.isLoadingValue;
         else return false;
       },
       set(newValue) {
@@ -68,5 +68,70 @@ export default {
 .fade-leave-to {
   background: #000;
   opacity: 0;
+}
+
+.intro-enter-active,
+.intro-leave-active {
+  transition-duration: calc(var(--transition-duration) * 2);
+}
+.intro-enter-active::before,
+.intro-leave-active::before,
+.intro-enter-active::after,
+.intro-leave-active::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 50%;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in-out;
+}
+.intro-enter-active::before,
+.intro-leave-active::before {
+  background-color: var(--background-color);
+}
+.intro-enter-active::after,
+.intro-leave-active::after {
+  top: 50%;
+  background-color: var(--background-color);
+}
+.intro-leave::before,
+.intro-leave::after {
+  transform: scaleX(0);
+}
+.intro-leave-active::before {
+  transition-duration: var(--transition-duration);
+}
+.intro-leave-active::after {
+  transition-duration: calc(
+    var(--transition-duration) - var(--transition-delay)
+  );
+  transition-delay: var(--transition-delay);
+}
+.intro-leave-to::before,
+.intro-leave-to::after {
+  transform: scale(1);
+  transform-origin: left;
+}
+.intro-enter::before,
+.intro-enter::after {
+  transform: scaleX(1);
+}
+.intro-enter-active::before {
+  transition-duration: var(--transition-duration);
+}
+.intro-enter-active::after {
+  transition-duration: calc(
+    var(--transition-duration) - var(--transition-delay)
+  );
+  transition-delay: var(--transition-delay);
+}
+.intro-enter-to::before,
+.intro-enter-to::after {
+  transform: scaleX(0);
+  transform-origin: right;
 }
 </style>

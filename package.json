@@ -15,7 +15,9 @@
   "dependencies": {
     "aos": "^2.3.4",
     "nuxt": "^2.0.0",
-    "uuid": "^8.0.0"
+    "uuid": "^8.0.0",
+    "vue-carousel": "^0.18.0",
+    "vue-fragment": "^1.5.1"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0",

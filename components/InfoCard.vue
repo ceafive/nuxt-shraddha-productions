@@ -16,7 +16,7 @@
       </div>
       <div class="mainheader">
         <p :class="mainheaderColor">
-          <router-link :to="routeLink" v-html="mainheader"></router-link>
+          <nuxt-link :to="routeLink" v-html="mainheader"></nuxt-link>
         </p>
       </div>
       <div

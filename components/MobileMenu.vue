@@ -12,7 +12,7 @@
           data-aos-easing="ease-in-out"
           @click="closeNav"
         >
-          <router-link :to="navLink.route">{{ navLink.name }}</router-link>
+          <nuxt-link :to="navLink.route">{{ navLink.name }}</nuxt-link>
         </p>
       </div>
     </div>
@@ -133,7 +133,7 @@ export default {
   @apply cursor-pointer;
 }
 
-a.router-link-exact-active {
+a.nuxt-link-exact-active {
   @apply text-appYellow;
 }
 </style>

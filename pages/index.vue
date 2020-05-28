@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { videocards, collectioncards, infocards } from '@/data/cardsdata';
+import { videocards, collectioncards, infocards } from '@/plugins/cardsdata';
 
 import VideoCard from '@/components/VideoCard';
 import CollectionCard from '@/components/CollectionCard';
@@ -116,8 +116,7 @@ export default {
   }
 }
 .current-progress {
+  @apply bg-appYellow transition-all duration-1000 ease-out;
   width: 4px;
-  background: #fffd13;
-  transition: 1s;
 }
 </style>

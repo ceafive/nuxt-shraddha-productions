@@ -1,14 +1,3 @@
-<template>
-  <div class="route-transition">
-    <transition name="overlay-up-down" mode="out-in">
-      <slot></slot>
-    </transition>
-    <div class="overlay-top"></div>
-    <div class="overlay-bottom"></div>
-  </div>
-</template>
-
-<style scoped>
 .route-transition {
   --overlay-bg: #191919 !important;
   --transition-duration: 0.5s !important;
@@ -100,4 +89,3 @@
 .overlay-up-leave-active {
   transition-duration: var(--transition-duration);
 }
-</style>

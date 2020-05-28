@@ -29,6 +29,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 :root {
-  --overlay-bg: #191919 !important;
-  --transition-duration: 0.5s !important;
+  --transition-duration: 800ms !important;
+  --transition-delay: 300ms !important;
+  --background-color: #191919 !important;
 }

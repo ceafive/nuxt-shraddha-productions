@@ -2,9 +2,9 @@
   <div class="navbar hidden">
     <div class="navlinks">
       <div v-for="navLink in navLinks" :key="navLink.name">
-        <router-link class="link" :to="navLink.route"
+        <nuxt-link class="link" :to="navLink.route"
           >{{ navLink.name }}<span class="slider"></span>
-        </router-link>
+        </nuxt-link>
       </div>
     </div>
 
@@ -12,9 +12,9 @@
 
     <div class="contact">
       <div>
-        <router-link class="link" to="/contact"
+        <nuxt-link class="link" to="/contact"
           >Contact Us<span class="slider"></span>
-        </router-link>
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -91,7 +91,7 @@ export default {
   @apply flex w-1/4 justify-end py-4 cursor-pointer;
 }
 
-a.router-link-exact-active {
+a.nuxt-link-exact-active {
   @apply text-appYellow;
 }
 </style>
