@@ -67,6 +67,11 @@ export default {
       }
       this.pressArticles = newArray;
     }
+  },
+  head() {
+    return {
+      title: 'Press & Media - Shraddha Productions'
+    };
   }
 };
 </script>

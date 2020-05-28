@@ -151,6 +151,11 @@ export default {
         params: { name: paramName }
       });
     }
+  },
+  head() {
+    return {
+      title: 'Collection - Shraddha Productions'
+    };
   }
 };
 </script>

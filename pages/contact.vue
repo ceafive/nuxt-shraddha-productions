@@ -127,6 +127,11 @@ export default {
         }
       ]
     };
+  },
+  head() {
+    return {
+      title: 'Contact - Shraddha Productions'
+    };
   }
 };
 </script>

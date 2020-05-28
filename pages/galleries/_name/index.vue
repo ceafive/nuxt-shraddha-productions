@@ -82,6 +82,11 @@ export default {
       this.clickedImageDetails = imageNo;
       this.modalOpen = !this.modalOpen;
     }
+  },
+  head() {
+    return {
+      title: 'Gallery - Shraddha Productions'
+    };
   }
 };
 </script>

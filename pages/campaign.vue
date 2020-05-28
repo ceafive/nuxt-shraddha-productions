@@ -16,7 +16,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      title: 'Campaign - Shraddha Productions'
+    };
+  }
+};
 </script>
 
 <style scoped>

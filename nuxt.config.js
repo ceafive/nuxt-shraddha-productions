@@ -16,7 +16,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Shraddha Productions - Beyond Borders',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -39,7 +39,8 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content:
+          'A Film Production company based in Surat, India and helping keep the focus on Surat and India'
       }
     ],
 

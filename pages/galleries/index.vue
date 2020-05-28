@@ -69,15 +69,7 @@ export default {
   },
   head() {
     return {
-      title: 'Galleries',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Galleries page listing images of all collectinos and models in a carousel view'
-        }
-      ]
+      title: 'Galleries - Shraddha Productions'
     };
   }
 };

@@ -90,7 +90,6 @@
         <br />
       </div>
     </div>
-
     <ContactCard />
   </div>
 </template>
@@ -98,7 +97,12 @@
 <script>
 import ContactCard from '@/components/ContactCard';
 export default {
-  components: { ContactCard }
+  components: { ContactCard },
+  head() {
+    return {
+      title: 'About - Shraddha Productions'
+    };
+  }
 };
 </script>
 
