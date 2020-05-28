@@ -37,16 +37,16 @@
         class="carousel"
       >
         <slide
-          v-for="imageTitle in imageTitles"
-          :key="imageTitle.name"
-          :data-name="imageTitle.name"
+          v-for="gallerycard in gallerycards"
+          :key="gallerycard.name"
+          :data-name="gallerycard.name"
           class="slide"
           :style="{
-            backgroundImage: `url('${require(`../../assets/images/galleries/${imageTitle.name}/${imageTitle.name}-1.jpg`)}')`
+            backgroundImage: `url('${require(`../../assets/images/galleries/${gallerycard.name}/${gallerycard.name}-1.jpg`)}')`
           }"
           @slideclick="handleSlideClick"
         >
-          <p class="inner-text">{{ imageTitle.name }}</p>
+          <p class="inner-text">{{ gallerycard.name }}</p>
         </slide>
       </carousel>
     </div>
@@ -54,30 +54,17 @@
 </template>
 
 <script>
+import { gallerycards } from '@/plugins/cardsdata';
 export default {
   data() {
     return {
-      imageTitles: [
-        { name: 'aza' },
-        { name: 'coral' },
-        { name: 'istella' },
-        { name: 'leona' },
-        { name: 'melange' },
-        { name: 'navika' },
-        { name: 'nazia' },
-        { name: 'niharika' },
-        { name: 'nitra' },
-        { name: 'nizam' }
-      ]
+      gallerycards
     };
   },
   methods: {
     handleSlideClick(dataset) {
       const clicked = dataset.name;
       this.$router.push({ name: 'galleries-name', params: { name: clicked } });
-      // this.$nextTick(() => {
-      //   console.log(this.$route);
-      // });
     }
   },
   head() {

@@ -11,7 +11,7 @@
               or to open some boxes of ideas, <br />
               you can reach out to us at`
       "
-      :showSocials="false"
+      :show-socials="false"
     />
 
     <div class="section2">

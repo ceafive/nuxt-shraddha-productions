@@ -1,3 +1,15 @@
+import { collectioncards, gallerycards } from './plugins/cardsdata';
+
+const dynamicRoutes = () => {
+  const collectionRoutes = collectioncards.map(
+    (collection) => `/collections/${collection.mainheader}`
+  );
+  const galleryRoutes = gallerycards.map(
+    (gallerycard) => `/galleries/${gallerycard.name}`
+  );
+  return collectionRoutes.concat(galleryRoutes);
+};
+
 export default {
   mode: 'universal',
   /*
@@ -139,5 +151,12 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  generate: {
+    routes() {
+      return new Promise((resolve) => {
+        resolve(dynamicRoutes());
+      });
+    }
   }
 };

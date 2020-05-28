@@ -30,7 +30,7 @@ export default {
   computed: {
     isLoading: {
       get() {
-        if (this.$route.fullPath === '/') return !this.isLoadingValue;
+        if (this.$route.name === 'index') return !this.isLoadingValue;
         else return false;
       },
       set(newValue) {

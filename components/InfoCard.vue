@@ -15,9 +15,11 @@
         </video>
       </div>
       <div class="mainheader">
-        <p :class="mainheaderColor">
-          <nuxt-link :to="routeLink" v-html="mainheader"></nuxt-link>
-        </p>
+        <nuxt-link
+          :to="routeLink"
+          :class="mainheaderColor"
+          v-html="mainheader"
+        ></nuxt-link>
       </div>
       <div
         data-aos="fade-left"

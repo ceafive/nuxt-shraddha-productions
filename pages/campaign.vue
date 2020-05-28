@@ -3,7 +3,7 @@
     <div class="main">
       <div class="mainheader">Campaign</div>
       <div>
-        <video width="1000" height="1000" controls autoplay>
+        <video width="1000" height="1000" controls>
           <source
             :src="require('@/assets/videos/Campaign.mp4')"
             type="video/mp4"

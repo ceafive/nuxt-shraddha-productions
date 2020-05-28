@@ -18,19 +18,19 @@
         :easing="'ease-in-out'"
         :loop="true"
         :speed="1000"
-        :perPage="1"
-        :paginationActiveColor="'#fffd13'"
-        :paginationSize="5"
-        :paginationPadding="1"
-        :paginationEnabled="true"
-        :navigationEnabled="true"
-        :navigationPrevLabel="
+        :per-page="1"
+        :pagination-active-color="'#fffd13'"
+        :pagination-size="5"
+        :pagination-padding="1"
+        :pagination-enabled="true"
+        :navigation-enabled="true"
+        :navigation-prev-label="
           `<svg class='stroke-current text-white hover:text-appYellow h-8 w-8 sm:h-12 sm:w-12' xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
           <title>ionicons-v5-a</title>
           <polyline points='328 112 184 256 328 400' style='fill:transparent;stroke-linecap:square;stroke-miterlimit:10;stroke-width:32px'/>
           </svg>`
         "
-        :navigationNextLabel="
+        :navigation-next-label="
           `<svg class='stroke-current text-white hover:text-appYellow h-8 w-8 sm:h-12 sm:w-12' xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
           <title>ionicons-v5-a</title>
           <polyline points='184 112 328 256 184 400' style='fill:transparent;stroke-linecap:square;stroke-miterlimit:10;stroke-width:32px'/>
@@ -39,14 +39,14 @@
         class="carousel"
       >
         <slide
-          v-for="number in numberOfImages[currentCollection]"
+          v-for="number in numberOfImages"
           :key="`${currentCollection}-${number}`"
           :data-index="`${currentCollection}-${number}`"
-          @slideclick="openModal"
           class="slide"
           :style="{
             backgroundImage: `url('${require(`@/assets/images/galleries/${currentCollection}/${currentCollection}-${number}.jpg`)}')`
           }"
+          @slideclick="openModal"
         >
         </slide>
       </carousel>
@@ -55,6 +55,7 @@
 </template>
 
 <script>
+import { gallerycards } from '@/plugins/cardsdata';
 import Modal from '@/components/Modal';
 export default {
   components: {
@@ -64,20 +65,16 @@ export default {
     return {
       currentCollection: this.$route.params.name,
       modalOpen: false,
-      clickedImageDetails: `${this.$route.params.name}-1`,
-      numberOfImages: {
-        aza: 35,
-        coral: 5,
-        istella: 4,
-        leona: 4,
-        melange: 4,
-        navika: 4,
-        nazia: 4,
-        niharika: 4,
-        nitra: 4,
-        nizam: 4
-      }
+      clickedImageDetails: `${this.$route.params.name}-1`
     };
+  },
+  computed: {
+    numberOfImages() {
+      const found = gallerycards.find(
+        (gallerycard) => gallerycard.name === this.currentCollection
+      );
+      return found.numberOfImages;
+    }
   },
   methods: {
     openModal(dataset) {

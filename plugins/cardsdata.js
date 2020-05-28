@@ -110,3 +110,16 @@ export const infocards = [
     image: () => require(`@/assets/images/about.jpg`)
   }
 ];
+
+export const gallerycards = [
+  { id: uuidv4(), name: 'aza', numberOfImages: 35 },
+  { id: uuidv4(), name: 'coral', numberOfImages: 5 },
+  { id: uuidv4(), name: 'istella', numberOfImages: 4 },
+  { id: uuidv4(), name: 'leona', numberOfImages: 4 },
+  { id: uuidv4(), name: 'melange', numberOfImages: 4 },
+  { id: uuidv4(), name: 'navika', numberOfImages: 4 },
+  { id: uuidv4(), name: 'nazia', numberOfImages: 4 },
+  { id: uuidv4(), name: 'niharika', numberOfImages: 4 },
+  { id: uuidv4(), name: 'nitra', numberOfImages: 4 },
+  { id: uuidv4(), name: 'nizam', numberOfImages: 4 }
+];
