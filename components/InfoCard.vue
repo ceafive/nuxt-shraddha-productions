@@ -4,9 +4,6 @@
     data-aos-duration="1000"
     data-aos-easing="ease-in-out-cubic"
     class="info-card"
-    :style="{
-      backgroundImage: `url('${image()}')`
-    }"
   >
     <div class="main">
       <div class="video-bg">
