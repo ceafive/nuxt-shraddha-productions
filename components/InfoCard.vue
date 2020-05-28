@@ -82,7 +82,7 @@ export default {
 }
 
 .info-card .main .video-bg {
-  @apply absolute top-0 left-0 h-full w-full;
+  @apply absolute top-0 left-0 h-full w-full z-10;
 }
 
 .info-card .main .video-bg video {
