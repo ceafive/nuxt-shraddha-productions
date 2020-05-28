@@ -146,6 +146,10 @@ export default {
   /*
    ** Build configuration
    */
+  pageTransition: 'overlay-up-down',
+  /*
+   ** Build configuration
+   */
   build: {
     transpile: ['vue-carousel'],
     /*

@@ -1,4 +1,4 @@
-.page-enter-active,
+/* .page-enter-active,
 .page-leave-active {
   transition-duration: 1600ms;
 }
@@ -57,4 +57,51 @@
 .page-enter-to::after {
   transform: scaleX(0);
   transform-origin: right;
+} */
+
+.app {
+  --overlay-bg: #191919 !important;
+  --transition-duration: 0.5s !important;
+}
+
+.overlay-up-down-enter ~ .overlay-bottom,
+.overlay-up-down-enter ~ .overlay-top {
+  height: 0;
+}
+.overlay-up-down-leave-active ~ .overlay-bottom,
+.overlay-up-down-leave-to ~ .overlay-bottom,
+.overlay-up-down-leave-to ~ .overlay-top {
+  height: 51vh;
+}
+.overlay-up-down-enter-active ~ .overlay-bottom,
+.overlay-up-down-enter-active ~ .overlay-top {
+  transition-timing-function: ease;
+}
+.overlay-up-down-leave-active ~ .overlay-bottom,
+.overlay-up-down-leave-active ~ .overlay-top {
+  transition-timing-function: ease;
+}
+.overlay-up-down-enter-active,
+.overlay-up-down-leave-active {
+  transition-duration: var(--transition-duration);
+}
+
+.overlay-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100vw;
+  background: var(--overlay-bg);
+  transition-duration: var(--transition-duration);
+}
+
+.overlay-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100vw;
+  background: var(--overlay-bg);
+  transition-duration: var(--transition-duration);
 }
