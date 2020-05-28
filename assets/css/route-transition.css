@@ -1,91 +1,60 @@
-.route-transition {
-  --overlay-bg: #191919 !important;
-  --transition-duration: 0.5s !important;
+.page-enter-active,
+.page-leave-active {
+  transition-duration: 1600ms;
 }
-.overlay-up-down-enter ~ .overlay-bottom,
-.overlay-up-down-enter ~ .overlay-top {
-  height: 0;
-}
-.overlay-up-down-leave-active ~ .overlay-bottom,
-.overlay-up-down-leave-to ~ .overlay-bottom,
-.overlay-up-down-leave-to ~ .overlay-top {
-  height: 51vh;
-}
-.overlay-up-down-enter-active ~ .overlay-bottom,
-.overlay-up-down-enter-active ~ .overlay-top {
-  transition-timing-function: ease;
-}
-.overlay-up-down-leave-active ~ .overlay-bottom,
-.overlay-up-down-leave-active ~ .overlay-top {
-  transition-timing-function: ease;
-}
-.overlay-up-down-enter-active,
-.overlay-up-down-leave-active {
-  transition-duration: var(--transition-duration);
-}
-
-.overlay-top {
+.page-enter-active::before,
+.page-leave-active::before,
+.page-enter-active::after,
+.page-leave-active::after {
+  content: '';
   position: fixed;
   top: 0;
   left: 0;
-  height: 0;
-  width: 100vw;
-  background: var(--overlay-bg);
-  transition-duration: var(--transition-duration);
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 50%;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in-out;
 }
-
-.overlay-down-enter ~ .overlay-top,
-.overlay-down-leave-to ~ .overlay-top {
-  height: 0;
+.page-enter-active::before,
+.page-leave-active::before {
+  background-color: #191919;
 }
-
-.overlay-down-enter-active ~ .overlay-top,
-.overlay-down-leave-active ~ .overlay-top {
-  height: 100vh;
+.page-enter-active::after,
+.page-leave-active::after {
+  top: 50%;
+  background-color: #191919;
 }
-
-.overlay-down-enter-active ~ .overlay-top {
-  transition-timing-function: ease-in;
+.page-leave::before,
+.page-leave::after {
+  transform: scaleX(0);
 }
-
-.overlay-down-leave-active ~ .overlay-top {
-  transition-timing-function: ease-out;
+.page-leave-active::before {
+  transition-duration: 800ms;
 }
-
-.overlay-down-enter-active,
-.overlay-down-leave-active {
-  transition-duration: var(--transition-duration);
+.page-leave-active::after {
+  transition-duration: 500ms;
+  transition-delay: 300ms;
 }
-
-.overlay-bottom {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 0;
-  width: 100vw;
-  background: var(--overlay-bg);
-  transition-duration: var(--transition-duration);
+.page-leave-to::before,
+.page-leave-to::after {
+  transform: scale(1);
+  transform-origin: left;
 }
-
-.overlay-up-enter ~ .overlay-bottom,
-.overlay-up-leave-to ~ .overlay-bottom {
-  height: 0;
+.page-enter::before,
+.page-enter::after {
+  transform: scaleX(1);
 }
-
-.overlay-up-enter-active ~ .overlay-bottom,
-.overlay-up-leave-active ~ .overlay-bottom {
-  height: 100vh;
+.page-enter-active::before {
+  transition-duration: 800ms;
 }
-
-.overlay-up-enter-active ~ .overlay-bottom {
-  transition-timing-function: ease-in;
+.page-enter-active::after {
+  transition-duration: 500ms;
+  transition-delay: 300ms;
 }
-
-.overlay-up-leave-active ~ .overlay-bottom {
-  transition-timing-function: ease-out;
-}
-
-.overlay-up-enter-active,
-.overlay-up-leave-active {
-  transition-duration: var(--transition-duration);
+.page-enter-to::before,
+.page-enter-to::after {
+  transform: scaleX(0);
+  transform-origin: right;
 }

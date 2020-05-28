@@ -112,7 +112,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/css/route-transition.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -133,10 +133,6 @@ export default {
    ** Nuxt.js modules
    */
   modules: [],
-  /*
-   ** Transition
-   */
-  // pageTransition: 'intro',
   /*
    ** Build configuration
    */

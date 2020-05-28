@@ -5,9 +5,7 @@
       <div v-else key="2">
         <MobileMenu />
         <Navbar />
-        <transition name="intro">
-          <nuxt />
-        </transition>
+        <nuxt />
       </div>
     </transition>
   </div>
@@ -70,66 +68,5 @@ export default {
 .fade-leave-to {
   background: #000;
   opacity: 0;
-}
-
-.intro-enter-active,
-.intro-leave-active {
-  transition-duration: 1600ms;
-}
-.intro-enter-active::before,
-.intro-leave-active::before,
-.intro-enter-active::after,
-.intro-leave-active::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  display: block;
-  width: 100%;
-  height: 50%;
-  transition-property: opacity, transform;
-  transition-timing-function: ease-in-out;
-}
-.intro-enter-active::before,
-.intro-leave-active::before {
-  background-color: #191919;
-}
-.intro-enter-active::after,
-.intro-leave-active::after {
-  top: 50%;
-  background-color: #191919;
-}
-.intro-leave::before,
-.intro-leave::after {
-  transform: scaleX(0);
-}
-.intro-leave-active::before {
-  transition-duration: 800ms;
-}
-.intro-leave-active::after {
-  transition-duration: 500ms;
-  transition-delay: 300ms;
-}
-.intro-leave-to::before,
-.intro-leave-to::after {
-  transform: scale(1);
-  transform-origin: left;
-}
-.intro-enter::before,
-.intro-enter::after {
-  transform: scaleX(1);
-}
-.intro-enter-active::before {
-  transition-duration: 800ms;
-}
-.intro-enter-active::after {
-  transition-duration: 500ms;
-  transition-delay: 300ms;
-}
-.intro-enter-to::before,
-.intro-enter-to::after {
-  transform: scaleX(0);
-  transform-origin: right;
 }
 </style>
