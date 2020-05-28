@@ -8,12 +8,12 @@
       backgroundImage: `url('${image()}')`
     }"
   >
-    <div class="video-bg">
-      <video autoplay muted loop>
-        <source :src="video()" type="video/mp4" />
-      </video>
-    </div>
     <div class="main">
+      <div class="video-bg">
+        <video autoplay muted loop>
+          <source :src="video()" type="video/mp4" />
+        </video>
+      </div>
       <div class="mainheader">
         <nuxt-link
           :to="routeLink"
@@ -63,7 +63,7 @@ export default {
 }
 
 .info-card .main .mainheader {
-  @apply font-mainheader flex flex-col justify-center items-center text-11vw leading-none;
+  @apply absolute font-mainheader flex flex-col justify-center items-center text-11vw leading-none;
 }
 
 .info-card .main .subheader {
@@ -85,7 +85,7 @@ export default {
 }
 
 .info-card .main .video-bg {
-  @apply h-full w-full;
+  @apply absolute top-0 left-0 h-full w-full;
 }
 
 .info-card .main .video-bg video {
